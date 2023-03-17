@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc -S -masm=intel "$CFILE" -o "$BASENAME.s"
+gcc -S -masm=intel $CFILE
 
