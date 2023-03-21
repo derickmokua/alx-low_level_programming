@@ -1,30 +1,23 @@
-#include <unistd.h>
+#include <main.h>
 /**
  * main -  a program that prints _putchar
  *
- * Return: Always 0 (success)
+ * Return: Always 0 
  */
 
 int main(void)
 {
-	char c = '_';
-
-	write(STDOUT_FILENO, &c, 1);
-	c = 'p';
-	write(STDOUT_FILENO, &c, 1);
-	c = 'u';
-	write(STDOUT_FILENO, &c, 1);
-	c = 't';
-	write(STDOUT_FILENO, &c, 1);
-	c = 'c';
-	write(STDOUT_FILENO, &c, 1);
-	c = 'h';
-	write(STDOUT_FILENO, &c, 1);
-	c = 'a';
-	write(STDOUT_FILENO, &c, 1);
-	c = 'r';
-	write(STDOUT_FILENO, &c, 1);
-	c = '\n';
-	write(STDOUT_FILENO, &c, 1);
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
+
+
+
