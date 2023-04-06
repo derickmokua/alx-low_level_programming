@@ -3,7 +3,7 @@
 /**
  * is_prime_number - checks if a number is prime
  * @n: the number to check
- *
+ * @i:input parameter
  * Return: 1 if n is prime, otherwise 0
  */
 int check_prime(int n, int i);
