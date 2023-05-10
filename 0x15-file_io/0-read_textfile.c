@@ -1,50 +1,33 @@
 #include "main.h"
 
 /**
- * read_textfile - Reads a text file and prints it to the POSIX standard output
- * @filename: Name of the file to read
- * @letters: Number of letters to read and print
+ * create_file - creates a file
+ * @filename:  pointer to name of the file to create.
+ * @text_content: pointer to a string to write to the file.
  *
- * Return: The actual number of letters read and printed, or 0
- * if an error occurs
+ * Return: If the function fails - -1.
+ *         else  - 1.
  */
-
-ssize_t read_textfile(const char *filename, size_t letters)
+int create_file(const char *filename, char *text_content)
 {
-	int fd;
-	ssize_t n, m;
-	char *buffer;
+	int fd, w, len = 0;
 
-	if (!filename)
-		return (0);
+	if (filename == NULL)
+		return (-1);
 
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-		return (0);
-
-	buffer = malloc(sizeof(char) * (letters + 1));
-	if (!buffer)
-		return (0);
-
-	n = read(fd, buffer, letters);
-	if (n == -1)
+	if (text_content != NULL)
 	{
-		free(buffer);
-		close(fd);
-		return (0);
+		for (len = 0; text_content[len];)
+			len++;
 	}
 
-	buffer[n] = '\0';
+	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	w = write(fd, text_content, len);
 
-	m = write(STDOUT_FILENO, buffer, n);
-	if (m == -1 || m != n)
-	{
-		free(buffer);
-		close(fd);
-		return (0);
-	}
+	if (fd == -1 || w == -1)
+		return (-1);
 
-	free(buffer);
 	close(fd);
-	return (n);
+
+	return (1);
 }
