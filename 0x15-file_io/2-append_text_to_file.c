@@ -1,10 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <errno.h>
-#include <string.h>
-
 /**
  * append_text_to_file - appends tect to end of file
  * @filename: filename
