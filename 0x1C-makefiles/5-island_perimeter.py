@@ -1,15 +1,14 @@
 #!/usr/bin/python3
+# Module for calculating the perimeter of an island
+
+def """
+Returns the perimeter of the island.
+
+Args:
+    grid (list): List of integers.
 """
-module for perimeter of island
-"""
-
-
-def island_perimeter(grid):
-    """returns the perimeter of the island
-    Args:
-         grid (list) = list of integers
-    """
-
+island_perimeter(grid):
+  
     width = len(grid[0])
     height = len(grid)
     edges = 0
