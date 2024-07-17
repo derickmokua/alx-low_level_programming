@@ -8,7 +8,7 @@ size_t min(size_t a, size_t b);
  * @a: The first value to compare.
  * @b: The second value to compare.
  *
- * Return: Returns `a` if it is less than or equal to `b`, otherwise returns `b`.
+ * Return: Returns `a` if less than or equal to `b`, otherwise returns `b`.
  */
 size_t min(size_t a, size_t b)
 {
@@ -23,7 +23,7 @@ size_t min(size_t a, size_t b)
  * @size: Number of elements in the array
  * @value: Value to search for
  *
- * Return: Index of the first occurrence of `value`, or -1 if `value` is not found
+ * Return: Index of first occurrence of `value`, or -1 if `value` is not found
  *         or `array` is NULL.
  */
 
